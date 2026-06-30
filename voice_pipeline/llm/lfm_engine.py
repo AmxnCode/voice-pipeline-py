@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 SYSTEM_PROMPT = (
     "You are LFM, a helpful and concise voice assistant. "
-    "Keep responses under 2 sentences. Be direct and natural."
+    "Respond naturally and thoroughly. Be direct and conversational."
 )
 
 _STOP_TOKENS = ["</|user|>", "</|system|>", "<|user|>", "<|system|>"]
@@ -21,7 +21,7 @@ class LFMEngine(LLMEngine):
         model_path: Path | str | None = None,
         n_ctx: int = 2048,
         n_threads: int | None = None,
-        max_tokens: int = 128,
+        max_tokens: int = 256,
     ):
         self.model_path = Path(model_path) if model_path else None
         self.n_ctx = n_ctx
