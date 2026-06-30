@@ -29,5 +29,8 @@ class FasterWhisperASR(ASREngine):
         if self._model is None:
             return "[Whisper not loaded]"
 
-        segments, _ = self._model.transcribe(audio, sample_rate=sample_rate)
+        if sample_rate != 16000:
+            from scipy import signal
+            audio = signal.resample(audio, int(len(audio) * 16000 / sample_rate))
+        segments, _ = self._model.transcribe(audio)
         return " ".join(seg.text for seg in segments).strip()
