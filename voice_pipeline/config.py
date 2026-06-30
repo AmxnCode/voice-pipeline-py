@@ -5,7 +5,7 @@ from pathlib import Path
 @dataclass
 class PipelineConfig:
     llm_model_path: Path | None = None
-    tts_voice: str = "M1"
+    tts_voice: str = "F1"
     max_tokens: int = 1024
     temperature: float = 0.7
     models_dir: Path = field(default_factory=lambda: Path.home() / ".cache" / "voice-pipeline")
