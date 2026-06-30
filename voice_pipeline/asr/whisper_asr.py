@@ -17,10 +17,11 @@ class FasterWhisperASR(ASREngine):
         from faster_whisper import WhisperModel
 
         logger.info(f"Loading faster-whisper {self.model_size}...")
+        compute = "float16" if self.device not in ("cpu", "auto") else "int8"
         self._model = WhisperModel(
             self.model_size,
             device=self.device,
-            compute_type="float16" if self.device != "cpu" else "int8",
+            compute_type=compute,
         )
         logger.info("faster-whisper loaded")
 
