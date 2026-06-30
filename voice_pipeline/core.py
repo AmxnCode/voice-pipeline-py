@@ -60,7 +60,10 @@ class VoicePipeline:
                 )
                 self.config.llm_model_path = model_path
 
-            engine = LFMEngine(model_path=model_path)
+            engine = LFMEngine(
+                model_path=model_path,
+                max_tokens=self.config.max_tokens,
+            )
             self._notify("Loading LLM...")
             engine.load()
             self._llm = engine
