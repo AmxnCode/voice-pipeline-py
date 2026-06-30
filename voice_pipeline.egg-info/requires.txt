@@ -1,0 +1,15 @@
+numpy>=1.24
+soundfile>=0.12
+huggingface-hub>=0.23
+
+[all]
+voice-pipeline[asr,llm,tts]
+
+[asr]
+faster-whisper>=1.1
+
+[llm]
+llama-cpp-python>=0.2
+
+[tts]
+supertonic>=1.3
