@@ -21,7 +21,7 @@ class LFMEngine(LLMEngine):
         model_path: Path | str | None = None,
         n_ctx: int = 2048,
         n_threads: int | None = None,
-        max_tokens: int = 256,
+        max_tokens: int = 1024,
     ):
         self.model_path = Path(model_path) if model_path else None
         self.n_ctx = n_ctx
