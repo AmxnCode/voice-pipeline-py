@@ -1,6 +1,6 @@
 [project]
 name = "voice-pipeline"
-version = "0.1.0"
+version = "0.1.1"
 description = "Fully local voice pipeline: ASR (faster-whisper) + LLM (llama.cpp) + TTS (supertonic)"
 authors = [{ name = "AmxnCode" }]
 license = { text = "Apache-2.0" }

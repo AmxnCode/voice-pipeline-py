@@ -31,6 +31,7 @@ def download_llm_model(
         repo_id=_REPO,
         filename=_LFM_GGUF,
         local_dir=str(dest_dir),
+        progress_callback=callback,
     )
     on_progress and on_progress(_LFM_GGUF, 1.0)
     return Path(path)
