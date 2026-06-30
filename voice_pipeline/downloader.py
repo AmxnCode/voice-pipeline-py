@@ -4,7 +4,7 @@ from typing import Callable
 
 logger = logging.getLogger(__name__)
 
-_REPO = "AmxnCode/voice-pipeline-models"
+_REPO = "LiquidAI/LFM2.5-350M-GGUF"
 _LFM_GGUF = "LFM2.5-350M-Q4_0.gguf"
 
 
